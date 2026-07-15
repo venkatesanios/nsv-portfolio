@@ -1,24 +1,311 @@
-<section class="hero">
-
-    <div class="hero-content">
-        <img src="assets/profile.jpg" 
-             alt="N.S.Venkatesan Profile"
-             class="profile-img">
-
-        <h1>N.S. Venkatesan MSc</h1>
-
-        <h2>
-            Senior Mobile App Developer
-        </h2>
-
-        <p>
-            iOS | Flutter | IoT | Cloud Connected Applications
-        </p>
-
-        <div class="buttons">
-            <a href="#contact">Contact Me</a>
-            <a href="#" class="resume">Download Resume</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N.S. Venkatesan — Senior Mobile App Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&amp;display=swap');
+        
+        :root {
+            --apple-black: #111111;
+        }
+        
+        body {
+            font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #1d1d1f;
+            line-height: 1.6;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+        }
+        
+        .nav-link {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #0071e3;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+        
+        .app-card {
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s;
+        }
+        
+        .app-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .apple-button {
+            background: #0071e3;
+            color: white;
+            padding: 12px 32px;
+            border-radius: 9999px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .apple-button:hover {
+            background: #0077ed;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+<body class="bg-white text-[#1d1d1f] overflow-x-hidden">
+    <!-- Apple-style Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center gap-8">
+                <a href="#" class="text-2xl font-semibold tracking-tighter">NSV</a>
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#work" class="nav-link">Work</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#" onclick="downloadResume()" 
+                   class="apple-button text-sm flex items-center gap-2">
+                    <i class="fas fa-download"></i>
+                    Resume
+                </a>
+            </div>
         </div>
-    </div>
+    </nav>
 
-</section>
+    <!-- Hero Section - Apple Style -->
+    <section class="hero-bg h-screen flex items-center text-white pt-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+       <div class="mb-8">
+          <img src="assets/profile.jpg" 
+         alt="N.S. Venkatesan"
+         class="w-40 h-40 mx-auto rounded-3xl shadow-2xl ring-8 ring-white/30 object-cover">
+        </div>
+            
+            <h1 class="text-7xl md:text-8xl font-semibold tracking-tighter mb-4">
+                N.S. Venkatesan
+            </h1>
+            <p class="text-3xl md:text-4xl font-light tracking-tight mb-6 text-white/90">
+                Senior Mobile App Developer
+            </p>
+            <p class="text-xl max-w-md mx-auto text-white/80 mb-12">
+                Crafting exceptional iOS, Flutter &amp; IoT experiences
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#work" 
+                   class="apple-button text-lg px-10 py-4 inline-flex items-center justify-center gap-3 text-base">
+                    View My Work
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#contact" 
+                   class="border border-white/70 hover:bg-white/10 text-white text-lg px-10 py-4 rounded-full inline-flex items-center justify-center gap-3 transition-all">
+                    Let's Connect
+                </a>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center text-white/70 text-sm">
+            <div class="w-5 h-8 border-2 border-white/50 rounded-full flex items-center justify-center">
+                <div class="w-1 h-2 bg-white/70 rounded-full animate-scroll"></div>
+            </div>
+            <span class="mt-3 tracking-widest text-xs">SCROLL</span>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-32 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-16 items-center">
+                <div class="md:col-span-5">
+                    <div class="sticky top-28">
+                        <span class="text-[#0071e3] font-medium tracking-widest text-sm">CHAPTER 01</span>
+                        <h2 class="section-title mt-3">The Story</h2>
+                    </div>
+                </div>
+                <div class="md:col-span-7">
+                    <div class="prose prose-lg max-w-none text-xl leading-relaxed text-[#1d1d1f]/90">
+                        <p class="mb-8">
+                            With over 8 years of experience building world-class mobile applications, I specialize in creating delightful digital experiences that connect users with technology.
+                        </p>
+                        <p>
+                            From pixel-perfect iOS applications to cross-platform Flutter solutions and IoT integrations, I thrive at the intersection of beautiful design and robust engineering.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-16 grid grid-cols-2 gap-8">
+                        <div>
+                            <div class="text-5xl font-semibold text-[#0071e3]">50+</div>
+                            <div class="text-sm uppercase tracking-widest mt-2">Apps Launched</div>
+                        </div>
+                        <div>
+                            <div class="text-5xl font-semibold text-[#0071e3]">12</div>
+                            <div class="text-sm uppercase tracking-widest mt-2">Countries Reached</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work / Projects -->
+    <section id="work" class="py-32 bg-[#f5f5f7]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <span class="text-[#0071e3] font-medium tracking-widest text-sm">CHAPTER 02</span>
+                    <h2 class="section-title mt-3">Selected Work</h2>
+                </div>
+                <a href="#" class="text-[#0071e3] flex items-center gap-2 hover:gap-3 transition-all">
+                    View all projects <span class="text-xl">→</span>
+                </a>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="app-card bg-white rounded-3xl overflow-hidden shadow-sm">
+                    <div class="h-96 bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center relative">
+                        <div class="text-white text-center">
+                            <i class="fas fa-mobile-alt text-8xl opacity-75"></i>
+                            <p class="mt-8 text-xl font-medium">FitnessFlow • iOS</p>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-2">FitnessFlow</h3>
+                        <p class="text-[#86868b]">A beautiful health &amp; fitness companion with real-time workout tracking, Apple Health integration, and social challenges.</p>
+                        <div class="flex gap-2 mt-6">
+                            <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">SwiftUI</span>
+                            <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">HealthKit</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="app-card bg-white rounded-3xl overflow-hidden shadow-sm">
+                    <div class="h-96 bg-gradient-to-br from-emerald-600 to-teal-600 flex items-center justify-center relative">
+                        <div class="text-white text-center">
+                            <i class="fas fa-leaf text-8xl opacity-75"></i>
+                            <p class="mt-8 text-xl font-medium">EcoTrack • Flutter</p>
+                        </div>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-2">EcoTrack</h3>
+                        <p class="text-[#86868b]">Cross-platform carbon footprint tracker with IoT device integration for smart home energy monitoring.</p>
+                        <div class="flex gap-2 mt-6">
+                            <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">Flutter</span>
+                            <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">Firebase</span>
+                            <span class="text-xs bg-gray-100 px-3 py-1 rounded-full">IoT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-32 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-[#0071e3] font-medium tracking-widest text-sm">CHAPTER 03</span>
+                <h2 class="section-title mt-3 mx-auto max-w-md">Expertise &amp; Tools</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-4xl mb-6">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl mb-4">iOS Development</h3>
+                    <p class="text-[#86868b]">Swift • SwiftUI • UIKit • Combine • Core Data • ARKit • WidgetKit</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center text-4xl mb-6">
+                        <i class="fab fa-flutter"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl mb-4">Cross-Platform</h3>
+                    <p class="text-[#86868b]">Flutter • Dart • Riverpod • Firebase • REST APIs</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 mx-auto bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-4xl mb-6">
+                        🌐
+                    </div>
+                    <h3 class="font-semibold text-2xl mb-4">IoT &amp; Cloud</h3>
+                    <p class="text-[#86868b]">MQTT • AWS IoT • Azure • Node-RED • HomeKit</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-32 bg-[#1d1d1f] text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-6xl font-semibold tracking-tighter mb-8">Let's build something<br>extraordinary together.</h2>
+            <p class="text-2xl text-white/70 mb-12 max-w-md mx-auto">
+                Currently open to new opportunities and collaborations.
+            </p>
+            
+            <a href="mailto:venkatesan@example.com" 
+               class="apple-button inline-flex items-center gap-3 text-xl px-16 py-6">
+                Send me a message
+                <i class="fas fa-paper-plane"></i>
+            </a>
+            
+            <div class="flex justify-center gap-8 mt-20 text-white/50">
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin text-3xl"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-github text-3xl"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter text-3xl"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-8 text-center text-sm text-[#86868b]">
+        <div class="max-w-6xl mx-auto px-6">
+            © 2026 N.S. Venkatesan. Made with precision.
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already included
+        
+        function downloadResume() {
+            alert("Resume would download here (PDF link in real version)");
+        }
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+        
+        // Add scroll animation for hero
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body>
+</html>
